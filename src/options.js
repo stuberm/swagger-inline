@@ -36,7 +36,7 @@ class Options {
     getScope() {
         return this.options.scope;
     }
-    
+
     getLogger() {
         return this.options.logger;
     }
@@ -48,12 +48,17 @@ class Options {
     getMetadata() {
         return this.options.metadata;
     }
+
+    getPattern() {
+        return this.options.pattern;
+    }
 }
 
 Options.DEFAULTS = {
     format: '.json',
     logger: () => {},
     ignore: ['node_modules/**/*', 'bower_modules/**/*'],
+    pattern: {},
 };
 
 module.exports = Options;
